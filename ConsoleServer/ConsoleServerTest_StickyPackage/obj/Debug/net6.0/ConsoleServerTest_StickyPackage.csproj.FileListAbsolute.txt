@@ -1,0 +1,14 @@
+C:\Users\18805\Documents\Projects\CSharpConcoleServer_gitHub\ConsoleServer\ConsoleServerTest_StickyPackage\bin\Debug\net6.0\ConsoleServerTest_StickyPackage.exe
+C:\Users\18805\Documents\Projects\CSharpConcoleServer_gitHub\ConsoleServer\ConsoleServerTest_StickyPackage\bin\Debug\net6.0\ConsoleServerTest_StickyPackage.deps.json
+C:\Users\18805\Documents\Projects\CSharpConcoleServer_gitHub\ConsoleServer\ConsoleServerTest_StickyPackage\bin\Debug\net6.0\ConsoleServerTest_StickyPackage.runtimeconfig.json
+C:\Users\18805\Documents\Projects\CSharpConcoleServer_gitHub\ConsoleServer\ConsoleServerTest_StickyPackage\bin\Debug\net6.0\ConsoleServerTest_StickyPackage.dll
+C:\Users\18805\Documents\Projects\CSharpConcoleServer_gitHub\ConsoleServer\ConsoleServerTest_StickyPackage\bin\Debug\net6.0\ConsoleServerTest_StickyPackage.pdb
+C:\Users\18805\Documents\Projects\CSharpConcoleServer_gitHub\ConsoleServer\ConsoleServerTest_StickyPackage\obj\Debug\net6.0\ConsoleServerTest_StickyPackage.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\18805\Documents\Projects\CSharpConcoleServer_gitHub\ConsoleServer\ConsoleServerTest_StickyPackage\obj\Debug\net6.0\ConsoleServerTest_StickyPackage.AssemblyInfoInputs.cache
+C:\Users\18805\Documents\Projects\CSharpConcoleServer_gitHub\ConsoleServer\ConsoleServerTest_StickyPackage\obj\Debug\net6.0\ConsoleServerTest_StickyPackage.AssemblyInfo.cs
+C:\Users\18805\Documents\Projects\CSharpConcoleServer_gitHub\ConsoleServer\ConsoleServerTest_StickyPackage\obj\Debug\net6.0\ConsoleServerTest_StickyPackage.csproj.CoreCompileInputs.cache
+C:\Users\18805\Documents\Projects\CSharpConcoleServer_gitHub\ConsoleServer\ConsoleServerTest_StickyPackage\obj\Debug\net6.0\ConsoleServerTest_StickyPackage.dll
+C:\Users\18805\Documents\Projects\CSharpConcoleServer_gitHub\ConsoleServer\ConsoleServerTest_StickyPackage\obj\Debug\net6.0\refint\ConsoleServerTest_StickyPackage.dll
+C:\Users\18805\Documents\Projects\CSharpConcoleServer_gitHub\ConsoleServer\ConsoleServerTest_StickyPackage\obj\Debug\net6.0\ConsoleServerTest_StickyPackage.pdb
+C:\Users\18805\Documents\Projects\CSharpConcoleServer_gitHub\ConsoleServer\ConsoleServerTest_StickyPackage\obj\Debug\net6.0\ConsoleServerTest_StickyPackage.genruntimeconfig.cache
+C:\Users\18805\Documents\Projects\CSharpConcoleServer_gitHub\ConsoleServer\ConsoleServerTest_StickyPackage\obj\Debug\net6.0\ref\ConsoleServerTest_StickyPackage.dll
