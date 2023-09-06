@@ -1,0 +1,14 @@
+C:\Users\18805\Documents\Projects\CSharpSocketServer\ConsoleServer\ConsoleApp1\bin\Debug\net6.0\ConsoleServerSimple.exe
+C:\Users\18805\Documents\Projects\CSharpSocketServer\ConsoleServer\ConsoleApp1\bin\Debug\net6.0\ConsoleServerSimple.deps.json
+C:\Users\18805\Documents\Projects\CSharpSocketServer\ConsoleServer\ConsoleApp1\bin\Debug\net6.0\ConsoleServerSimple.runtimeconfig.json
+C:\Users\18805\Documents\Projects\CSharpSocketServer\ConsoleServer\ConsoleApp1\bin\Debug\net6.0\ConsoleServerSimple.dll
+C:\Users\18805\Documents\Projects\CSharpSocketServer\ConsoleServer\ConsoleApp1\bin\Debug\net6.0\ConsoleServerSimple.pdb
+C:\Users\18805\Documents\Projects\CSharpSocketServer\ConsoleServer\ConsoleApp1\obj\Debug\net6.0\ConsoleServerSimple.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\18805\Documents\Projects\CSharpSocketServer\ConsoleServer\ConsoleApp1\obj\Debug\net6.0\ConsoleServerSimple.AssemblyInfoInputs.cache
+C:\Users\18805\Documents\Projects\CSharpSocketServer\ConsoleServer\ConsoleApp1\obj\Debug\net6.0\ConsoleServerSimple.AssemblyInfo.cs
+C:\Users\18805\Documents\Projects\CSharpSocketServer\ConsoleServer\ConsoleApp1\obj\Debug\net6.0\ConsoleServerSimple.csproj.CoreCompileInputs.cache
+C:\Users\18805\Documents\Projects\CSharpSocketServer\ConsoleServer\ConsoleApp1\obj\Debug\net6.0\ConsoleServerSimple.dll
+C:\Users\18805\Documents\Projects\CSharpSocketServer\ConsoleServer\ConsoleApp1\obj\Debug\net6.0\refint\ConsoleServerSimple.dll
+C:\Users\18805\Documents\Projects\CSharpSocketServer\ConsoleServer\ConsoleApp1\obj\Debug\net6.0\ConsoleServerSimple.pdb
+C:\Users\18805\Documents\Projects\CSharpSocketServer\ConsoleServer\ConsoleApp1\obj\Debug\net6.0\ConsoleServerSimple.genruntimeconfig.cache
+C:\Users\18805\Documents\Projects\CSharpSocketServer\ConsoleServer\ConsoleApp1\obj\Debug\net6.0\ref\ConsoleServerSimple.dll

@@ -1,0 +1,14 @@
+C:\Users\18805\Documents\Projects\CSharpSocketServer\ConsoleServer\ConsoleServerAsync\bin\Debug\net6.0\ConsoleServerAsync.exe
+C:\Users\18805\Documents\Projects\CSharpSocketServer\ConsoleServer\ConsoleServerAsync\bin\Debug\net6.0\ConsoleServerAsync.deps.json
+C:\Users\18805\Documents\Projects\CSharpSocketServer\ConsoleServer\ConsoleServerAsync\bin\Debug\net6.0\ConsoleServerAsync.runtimeconfig.json
+C:\Users\18805\Documents\Projects\CSharpSocketServer\ConsoleServer\ConsoleServerAsync\bin\Debug\net6.0\ConsoleServerAsync.dll
+C:\Users\18805\Documents\Projects\CSharpSocketServer\ConsoleServer\ConsoleServerAsync\bin\Debug\net6.0\ConsoleServerAsync.pdb
+C:\Users\18805\Documents\Projects\CSharpSocketServer\ConsoleServer\ConsoleServerAsync\obj\Debug\net6.0\ConsoleServerAsync.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\18805\Documents\Projects\CSharpSocketServer\ConsoleServer\ConsoleServerAsync\obj\Debug\net6.0\ConsoleServerAsync.AssemblyInfoInputs.cache
+C:\Users\18805\Documents\Projects\CSharpSocketServer\ConsoleServer\ConsoleServerAsync\obj\Debug\net6.0\ConsoleServerAsync.AssemblyInfo.cs
+C:\Users\18805\Documents\Projects\CSharpSocketServer\ConsoleServer\ConsoleServerAsync\obj\Debug\net6.0\ConsoleServerAsync.csproj.CoreCompileInputs.cache
+C:\Users\18805\Documents\Projects\CSharpSocketServer\ConsoleServer\ConsoleServerAsync\obj\Debug\net6.0\ConsoleServerAsync.dll
+C:\Users\18805\Documents\Projects\CSharpSocketServer\ConsoleServer\ConsoleServerAsync\obj\Debug\net6.0\refint\ConsoleServerAsync.dll
+C:\Users\18805\Documents\Projects\CSharpSocketServer\ConsoleServer\ConsoleServerAsync\obj\Debug\net6.0\ConsoleServerAsync.pdb
+C:\Users\18805\Documents\Projects\CSharpSocketServer\ConsoleServer\ConsoleServerAsync\obj\Debug\net6.0\ConsoleServerAsync.genruntimeconfig.cache
+C:\Users\18805\Documents\Projects\CSharpSocketServer\ConsoleServer\ConsoleServerAsync\obj\Debug\net6.0\ref\ConsoleServerAsync.dll
