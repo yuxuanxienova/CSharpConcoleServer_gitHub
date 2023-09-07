@@ -59,16 +59,32 @@ class MainClass
                 return false;
         }
 
+        ////广播
+        //string recvStr = System.Text.Encoding.Default.GetString(state.readBuff, 0, count);
+        //Console.WriteLine("Receive:" + recvStr);
+        //string sendStr = clientfd.RemoteEndPoint.ToString() + ':' + recvStr;
+        //byte[] sendBytes = System.Text.Encoding.Default.GetBytes(sendStr);
+        //foreach (ClientState cs in clients.Values) 
+        //{
+        //    cs.socket.Send(sendBytes);
+        //}
+        //return true;
+
+        //-------------------------Used to test ClientAsync_NoSteaky-------------------------
+        //显示
+        string recvStr = System.Text.Encoding.Default.GetString(state.readBuff, 2, count - 2);
+        Console.WriteLine("Reveive" + recvStr);
+
         //广播
-        string recvStr = System.Text.Encoding.Default.GetString(state.readBuff, 0, count);
-        Console.WriteLine("Receive:" + recvStr);
-        string sendStr = clientfd.RemoteEndPoint.ToString() + ':' + recvStr;
-        byte[] sendBytes = System.Text.Encoding.Default.GetBytes(sendStr);
-        foreach (ClientState cs in clients.Values) 
+        byte[] sendBytes = new byte[count];
+        Array.Copy(state.readBuff, 0, sendBytes, 0, count);
+        foreach (ClientState cs in clients.Values)
         {
             cs.socket.Send(sendBytes);
         }
         return true;
+        //-----------------------------------------------------------------------------------
+
 
 
     }
