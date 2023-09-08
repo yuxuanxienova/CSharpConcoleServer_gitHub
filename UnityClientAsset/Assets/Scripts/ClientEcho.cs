@@ -22,6 +22,7 @@ public class ClientEcho : MonoBehaviour
         socket.Connect("127.0.0.1" , 1234);        
 
     }
+    
 
     //点击发送按钮
     public void Send()

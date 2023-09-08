@@ -7,22 +7,22 @@ using System.Net.Sockets;
 using TMPro;
 using System.Linq;
 
-public class ClientAsync_NoSteaky : MonoBehaviour
+public class ClientAsync_CompleteSend : MonoBehaviour
 {
     Socket socket;
     public TMP_InputField tMP_InputField;
     public TMP_Text tMP_Text;
-    
 
-    //æ¥æ”¶ç¼“å†²åŒº
+
+    //½ÓÊÕ»º³åÇø
     byte[] readBuff = new byte[1024];
 
-    //æ¥æ”¶ç¼“å†²åŒºçš„æ•°æ®é•¿åº¦
+    //½ÓÊÕ»º³åÇøµÄÊı¾İ³¤¶È
     int buffCount = 0;
 
     string recvStr = " ";
 
-    //ç‚¹å‡»é“¾æ¥æŒ‰é’®
+    //µã»÷Á´½Ó°´Å¥
     public void Connection()
     {
         //Socket
@@ -31,38 +31,38 @@ public class ClientAsync_NoSteaky : MonoBehaviour
         //Async Connect
         // socket.BeginConnect("127.0.0.1", 1234, ConnectCallBack, socket);
 
-        //ç²¾ç®€ä»£ç ï¼šä½¿ç”¨åŒæ­¥connect
+        //¾«¼ò´úÂë£ºÊ¹ÓÃÍ¬²½connect
         socket.Connect("127.0.0.1", 1234);
-        socket.BeginReceive(readBuff, buffCount, 1024-buffCount, 0, ReceiveCallBack, socket);
+        socket.BeginReceive(readBuff, buffCount, 1024 - buffCount, 0, ReceiveCallBack, socket);
 
 
     }
 
-    //Receiveå›è°ƒ
+    //Receive»Øµ÷
     public void ReceiveCallBack(IAsyncResult ar)
     {
         try
         {
-            Socket socket = (Socket) ar.AsyncState;
+            Socket socket = (Socket)ar.AsyncState;
 
-            //è·å–æ¥æ”¶æ•°æ®é•¿åº¦
-            int count  = socket.EndReceive(ar);
+            //»ñÈ¡½ÓÊÕÊı¾İ³¤¶È
+            int count = socket.EndReceive(ar);
             buffCount += count;
 
-            //å¤„ç†äºŒè¿›åˆ¶æ¶ˆæ¯
+            //´¦Àí¶ş½øÖÆÏûÏ¢
             OnReceiveData();
 
-            //---------------æ¨¡æ‹Ÿç²˜åŒ…--------------
-            //ç­‰å¾…
-            System.Threading.Thread.Sleep(1000*30);
-            //-------------------------------------
+            ////---------------Ä£ÄâÕ³°ü--------------
+            ////µÈ´ı
+            //System.Threading.Thread.Sleep(1000 * 30);
+            ////-------------------------------------
 
-            //ç»§ç»­æ¥æ”¶æ•°æ®åŒ…
-            socket.BeginReceive(readBuff, buffCount, 1024-buffCount, 0, ReceiveCallBack, socket);
+            //¼ÌĞø½ÓÊÕÊı¾İ°ü
+            socket.BeginReceive(readBuff, buffCount, 1024 - buffCount, 0, ReceiveCallBack, socket);
         }
-        catch(SocketException ex)
+        catch (SocketException ex)
         {
-            Debug.Log("Socket Receive Fail" );
+            Debug.Log("Socket Receive Fail");
             Debug.Log(ex);
         }
 
@@ -73,28 +73,28 @@ public class ClientAsync_NoSteaky : MonoBehaviour
         Debug.Log("[Recv 1] buff Count = " + buffCount);
         Debug.Log("[Recv 2] readbuff = " + BitConverter.ToString(readBuff));
 
-        //æ¶ˆæ¯é•¿åº¦
-        //1. å¦‚æœå®¹é‡å°äºæ¶ˆæ¯å¤´çš„é•¿åº¦ï¼ˆ2ï¼‰ï¼Œä¸å¤„ç†
-        if(buffCount <= 2)
+        //ÏûÏ¢³¤¶È
+        //1. Èç¹ûÈİÁ¿Ğ¡ÓÚÏûÏ¢Í·µÄ³¤¶È£¨2£©£¬²»´¦Àí
+        if (buffCount <= 2)
         {
             return;
         }
 
-        //å¤§äºäºŒçš„éƒ¨åˆ†æ˜¯æ¶ˆæ¯ä½“
+        //´óÓÚ¶şµÄ²¿·ÖÊÇÏûÏ¢Ìå
         Int16 bodyLength = BitConverter.ToInt16(readBuff, 0);
         Debug.Log("[Recv 3] bodyLength = " + bodyLength);
 
-        //2. å¦‚æœå®¹é‡å°äºæ¶ˆæ¯å¤´åŠ æ¶ˆæ¯ä½“ï¼Œä¸å¤„ç†
-        if(buffCount < 2 + bodyLength)
+        //2. Èç¹ûÈİÁ¿Ğ¡ÓÚÏûÏ¢Í·¼ÓÏûÏ¢Ìå£¬²»´¦Àí
+        if (buffCount < 2 + bodyLength)
         {
             return;
         }
 
-        //3. ç¼“å†²åŒºé•¿åº¦å¤§äºä¸€æ¡å®Œæ•´ä¿¡æ¯
+        //3. »º³åÇø³¤¶È´óÓÚÒ»ÌõÍêÕûĞÅÏ¢
         string s = System.Text.Encoding.UTF8.GetString(readBuff, 2, buffCount);
         Debug.Log("[Recv 4] s = " + s);
 
-        //3.1 æ›´æ–°ç¼“å†²åŒº
+        //3.1 ¸üĞÂ»º³åÇø
         int start = 2 + bodyLength;
         int count = buffCount - start;
         Array.Copy(readBuff, start, readBuff, 0, count);
@@ -102,10 +102,10 @@ public class ClientAsync_NoSteaky : MonoBehaviour
 
         Debug.Log("[Recv 5] buffCount = " + buffCount);
 
-        //æ¶ˆæ¯å¤„ç†
+        //ÏûÏ¢´¦Àí
         recvStr = s + "\n" + recvStr;
 
-        //ç»§ç»­è¯»å–æ¶ˆæ¯
+        //¼ÌĞø¶ÁÈ¡ÏûÏ¢
         OnReceiveData();
 
 
@@ -113,7 +113,7 @@ public class ClientAsync_NoSteaky : MonoBehaviour
 
     }
 
-    // //Connect å›è°ƒ
+    // //Connect »Øµ÷
     // public void ConnectCallBack(IAsyncResult ar)
     // {
     //     try
@@ -134,50 +134,68 @@ public class ClientAsync_NoSteaky : MonoBehaviour
 
 
 
-    //ç‚¹å‡»å‘é€æŒ‰é’®
+    //-------------------------ÍêÕû·¢ËÍ-------------------------------------
+    //¶¨Òå
+    Queue<ByteArray> writeQueue = new Queue<ByteArray>();
+
+    //µã»÷·¢ËÍ°´Å¥   
     public void Send()
     {
         //Send
         string sendStr = tMP_InputField.text;
 
-        //ç»„è£…åè®®
+        //×é×°Ğ­Òé
         byte[] bodyBytes = System.Text.Encoding.Default.GetBytes(sendStr);
         Int16 len = (Int16)bodyBytes.Length;
         byte[] lenBytes = BitConverter.GetBytes(len);
         byte[] sendBytes = lenBytes.Concat(bodyBytes).ToArray();
 
+        //---------------------------------------------------
 
+        //³õÊ¼»¯ByteArray È»ºó Èë¶Ó
+        ByteArray ba = new ByteArray(sendBytes);
+        writeQueue.Enqueue(ba);
 
-        // socket.BeginSend(sendBytes, 0, sendBytes.Length, 0, SendCallback, socket);
-        //ä¸ºäº†ç²¾ç®€ä»£ç ï¼Œä½¿ç”¨åŒæ­¥sned
-        //ä¸è€ƒè™‘æŠ›å‡ºå¼‚å¸¸
-        socket.Send(sendBytes);
-        Debug.Log("[Send]" + BitConverter.ToString(sendBytes));
-        
+        //µ±¶ÓÖĞÖ»ÓĞÒ»Ìõ´ı·¢ÏûÏ¢Ê±ºò²Å·¢ËÍ
+        if (writeQueue.Count == 1) 
+        {
+            socket.BeginSend(ba.bytes, ba.readIdx, ba.length, 0, SendCallback, socket);
+
+        }
+
+        //-----------------------------------------------------
 
     }
 
-    // public void SendCallback(IAsyncResult ar)
-    // {
-    //     try
-    //     {
-    //         Socket socket = (Socket) ar.AsyncState;
-    //         int count = socket.EndSend(ar);
-    //         Debug.Log("Socket Send succ" + count);
 
-    //     }
-    //     catch (SocketException ex)
-    //     {
-    //         Debug.Log("Socket Send Fail" + ex.ToString());
-    //     }
+    public void SendCallback(IAsyncResult ar)
+    {
+        //»ñÈ¡state, »ñÈ¡EndSend µÄ´¦Àí
+        Socket socket = (Socket)ar.AsyncState;
+        int count = socket.EndSend(ar);
 
-    // }
+        //ÅĞ¶ÏÊé·ñ·¢ËÍÍêÕû
+        ByteArray ba = writeQueue.First();
+        ba.readIdx += count;
+        if (ba.length == 0) 
+        {
+            writeQueue.Dequeue();
+            ba = writeQueue.First();
+        }
+
+        //Èç¹ûÏûÏ¢·¢ËÍ²»ÍêÕû£¬»ò´æÔÚµÚ¶şÌõÊı¾İ
+        if (ba != null) 
+        {
+            socket.BeginSend(ba.bytes, ba.readIdx, ba.length, 0, SendCallback, socket);
+        }
+
+
+    }
+    //---------------------------------------------------------------------------------
 
     public void Update()
     {
         tMP_Text.text = recvStr;
     }
-    
-   
-   
+
 }
